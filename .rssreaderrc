@@ -1,0 +1,23 @@
+# URL File Format
+#
+# This file kind of copies grub.conf.  Think of each url as a title
+# you can explicity disable auto refresh by setting it to -1.
+# Hashes are comments, blank spaces are ignored.  Keys and values
+# can be seperated by any kind of white space that isn't a new line
+
+#http_proxy proxy:3128
+
+url http://www.reddit.com/r/learnprogramming/.rss
+refresh 120
+url http://www.reddit.com/r/programming/.rss
+refresh 120
+url http://www.reddit.com/r/Python/.rss
+refresh 120
+url http://news.ycombinator.com/rss
+refresh 180
+url http://rss.slashdot.org/Slashdot/slashdot
+refresh 200
+url http://feeds.feedburner.com/thechangelog?format=xml
+refresh 220
+url http://stackoverflow.com/feeds/tag?tagnames=c&sort=newest
+refresh 300
