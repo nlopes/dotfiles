@@ -2,9 +2,9 @@
 (setq inhibit-startup-message t)
 
 ;; favorite colors (sue me)
-(set-background-color "black")
-(set-foreground-color "white")
-(set-cursor-color "white")
+(set-background-color "wheat")
+(set-foreground-color "black")
+(set-cursor-color "black")
 
 ;;highlight my fonts
 (global-font-lock-mode t)
@@ -105,7 +105,7 @@
 		    :family "Anonymous Pro"
 		    :height 120)
 (set-face-attribute 'font-lock-comment-face nil
-		    :family "Optima"
+		    :family "Anonymous Pro"
 		    :height 120
 		    :slant 'italic
 		    :background "#ddddee"
