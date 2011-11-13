@@ -100,6 +100,23 @@
 (add-to-list 'auto-mode-alist '("access\\.conf\\'" . apache-mode))
 (add-to-list 'auto-mode-alist '("sites-\\(available\\|enabled\\)/" . apache-mode))
 
+;; default font
+(set-face-attribute 'default nil
+		    :family "Anonymous Pro"
+		    :height 120)
+(set-face-attribute 'font-lock-comment-face nil
+		    :family "Optima"
+		    :height 120
+		    :slant 'italic
+		    :background "#ddddee"
+		    :foreground "#000000")
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+)
 (custom-set-faces
  ;; stuff should go here
  )
