@@ -1,6 +1,9 @@
 ;; remove annoying message
 (setq inhibit-startup-message t)
 
+;; disable toolbar
+(tool-bar-mode -1)
+
 ;; favorite colors (sue me)
 (set-background-color "wheat")
 (set-foreground-color "black")
