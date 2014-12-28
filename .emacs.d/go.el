@@ -1,5 +1,3 @@
-(setenv "GOPATH" (concat home-dir "/Projects/go"))
-
 (require 'go-mode)
 (add-hook 'before-save-hook 'gofmt-before-save)
 (defun my-go-mode-hook ()

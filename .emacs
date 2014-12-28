@@ -12,6 +12,7 @@
                      "company"
                      "desktop"
                      "dired"
+                     "exec-path"
                      "helm"
                      "go"
                      "magit"
