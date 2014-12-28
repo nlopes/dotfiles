@@ -1,0 +1,2 @@
+;; better dir
+(require 'dired+)
