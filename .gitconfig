@@ -1,0 +1,24 @@
+[nlopes]
+[user]
+    name = Norberto Lopes
+    email = nlopes.ml@gmail.com
+    signingkey = 2173CBE9
+
+[github]
+    user = nlopes
+    token = THAT_WOULD_BE_PRICELESS_WOULDN'T_IT?
+[core]
+    editor = emacs
+[color]
+    ui = auto
+[alias]
+    pullr = pull --rebase
+    st = status
+    d = diff
+    s = stash
+    us = stash pop
+    rl = reflog
+    r = rebase
+    ri = rebase -i
+[push]
+    default = current
