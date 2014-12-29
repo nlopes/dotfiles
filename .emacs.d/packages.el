@@ -23,7 +23,7 @@
     magit magit-filenotify magit-gh-pulls magit-push-remote
     powerline
     project-explorer
-    python-environment python-mode python-pylint
+    python-environment pylint
     rainbow-mode
     virtualenvwrapper
     web-mode)

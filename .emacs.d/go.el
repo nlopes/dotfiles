@@ -17,3 +17,4 @@
   (company-mode))
 (add-hook 'go-mode-hook 'my-go-mode-hook)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
+(add-hook 'go-mode-hook 'highlight-word-hook)
