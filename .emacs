@@ -6,6 +6,7 @@
                      "ido"
                      "font"
                      ;; 3rd party
+                     "idle-highlight" ;; comes first because code hooks will use it
                      "apache"
                      "auctex"
                      "c"
@@ -17,8 +18,11 @@
                      "go"
                      "magit"
                      "powerline"
+                     "projectile"
                      "python"
+                     "rust"
                      "sql"
+                     "term"
                      "web"
                      ;; below files must load last
                      "hooks"

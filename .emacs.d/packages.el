@@ -15,14 +15,17 @@
     flycheck
     gh ; github
     git-rebase-mode git-commit-mode
-    go-eldoc go-mode
+    go-eldoc go-errcheck go-mode go-projectile
     helm helm-ag helm-pydoc
     idle-highlight-mode ; highlight current word
     js2-mode
     json-mode
     magit magit-filenotify magit-gh-pulls magit-push-remote
+    multi-term
+    ox-reveal
     powerline
     project-explorer
+    projectile
     python-environment pylint
     rainbow-mode
     virtualenvwrapper

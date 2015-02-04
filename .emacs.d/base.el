@@ -1,7 +1,7 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
 
-(when (window-system)
+(when window-system
   (tool-bar-mode -1)
   (scroll-bar-mode -1))
 
@@ -21,7 +21,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; wrap at 80
-(set-default 'fill-column 80)
+(set-default 'fill-column 120)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq-default c-basic-offset 4)
@@ -39,3 +39,6 @@
 
 (setq truncate-lines t)
 (setq truncate-partial-width-windows nil)
+
+(setq user-mail-address "nlopes.ml@gmail.com")
+(set-frame-parameter nil 'fullscreen 'fullboth)
