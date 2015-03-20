@@ -42,3 +42,6 @@
 
 (setq user-mail-address "nlopes.ml@gmail.com")
 (set-frame-parameter nil 'fullscreen 'fullboth)
+
+;; If you use helm you need this or session abbreviates long variables as '...'
+(setq session-save-print-spec '(t nil 40000))

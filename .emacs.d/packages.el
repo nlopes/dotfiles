@@ -16,7 +16,7 @@
     gh ; github
     git-rebase-mode git-commit-mode
     go-eldoc go-errcheck go-mode go-projectile
-    helm helm-ag helm-pydoc
+    helm helm-ag helm-dash helm-pydoc
     idle-highlight-mode ; highlight current word
     js2-mode
     json-mode
@@ -27,6 +27,7 @@
     project-explorer
     projectile
     python-environment pylint
+    solarized-theme
     rainbow-mode
     virtualenvwrapper
     web-mode)
@@ -35,3 +36,6 @@
 (dolist (p my-packages)
   (when (not (package-installed-p p))
     (package-install p)))
+
+;; require packages here that depend on the ordering later on
+(require 'flycheck)

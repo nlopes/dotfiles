@@ -10,9 +10,10 @@
   ; Customize compile command to run go build
   (if (not (string-match "go" compile-command))
       (set (make-local-variable 'compile-command)
-           "go build -v && go test -v && go vet"))
+           "go build -v && go vet && go test -short -coverprofile cover.out && go tool cover -func cover.out"))
   (local-set-key (kbd "C-c C-c") 'compile)
   (local-set-key (kbd "C-c C-g") 'go-goto-imports)
+  (local-set-key (kbd "C-c C-k") 'godoc)
   ; github.com/kisielk/errcheck
   (local-set-key (kbd "C-c C-e") 'go-errcheck)
   (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
@@ -22,7 +23,15 @@
   ; use company-go in go-mode
   (set (make-local-variable 'company-backends) '(company-go))
   (company-mode))
-(add-hook 'go-mode-hook 'my-go-mode-hook)
+
+;; set helm-dash documentation
+(defun go-doc ()
+  (interactive)
+  (setq-local helm-dash-docsets '("Go")))
+
+(add-hook 'go-mode-hook 'company-mode)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 (add-hook 'go-mode-hook 'highlight-word-hook)
 (add-hook 'go-mode-hook 'go-oracle-mode)
+(add-hook 'go-mode-hook 'my-go-mode-hook)
+(add-hook 'go-mode-hook 'go-doc)
