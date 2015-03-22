@@ -20,7 +20,6 @@
 ;; y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; wrap at 80
 (set-default 'fill-column 120)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
@@ -32,7 +31,7 @@
 (setq backup-directory-alist '(("." . "~/.emacs.d/file-backups")))
 
 ;; line numbers on the left
-(linum-mode 1)
+(global-linum-mode 1)
 
 ;; follow output
 (setq compilation-scroll-output t)

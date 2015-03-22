@@ -9,7 +9,7 @@
 
 (defvar my-packages
   '(ag
-    company company-go
+    company company-anaconda company-go
     dired+
     exec-path-from-shell ; env vars
     flycheck
