@@ -42,5 +42,10 @@
 (setq user-mail-address "nlopes.ml@gmail.com")
 (set-frame-parameter nil 'fullscreen 'fullboth)
 
+;; taking the plunge
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
 ;; If you use helm you need this or session abbreviates long variables as '...'
 (setq session-save-print-spec '(t nil 40000))

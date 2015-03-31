@@ -14,27 +14,30 @@
     exec-path-from-shell ; env vars
     flycheck
     gh ; github
-    git-rebase-mode git-commit-mode
+    git-rebase-mode git-commit-mode git-gutter
     go-eldoc go-errcheck go-mode go-projectile
     helm helm-ag helm-dash helm-pydoc
     idle-highlight-mode ; highlight current word
     js2-mode
     json-mode
     magit magit-filenotify magit-gh-pulls magit-push-remote
+    material-theme
     multi-term
     ox-reveal
     powerline
     project-explorer
     projectile
     python-environment pylint
-    solarized-theme
     rainbow-mode
+    rvm
+    solarized-theme
     virtualenvwrapper
     web-mode)
   "List of packages I need installed")
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
+    (package-refresh-contents)
     (package-install p)))
 
 ;; require packages here that depend on the ordering later on

@@ -1,1 +1,1 @@
-(load-theme 'wombat t)
+(load-theme 'material t)
