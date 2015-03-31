@@ -7,10 +7,13 @@
 [github]
     user = nlopes
     token = THAT_WOULD_BE_PRICELESS_WOULDN'T_IT?
+
 [core]
     editor = emacs
+
 [color]
     ui = auto
+
 [alias]
     pullr = pull --rebase
     st = status
@@ -20,5 +23,12 @@
     rl = reflog
     r = rebase
     ri = rebase -i
+    ll = log --pretty=oneline --abbrev-commit --graph
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+    dw = diff --word-diff
+
 [push]
     default = current
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
