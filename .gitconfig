@@ -19,16 +19,21 @@
     st = status
     d = diff
     s = stash
-    us = stash pop
+    sp = stash pop
+    co = checkout
     rl = reflog
     r = rebase
     ri = rebase -i
     ll = log --pretty=oneline --abbrev-commit --graph
-    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
+    lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n          %C(bold white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     dw = diff --word-diff
+    prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
 
 [push]
     default = current
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
+
+[branch]
+	autosetuprebase = always
