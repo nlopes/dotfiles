@@ -1,2 +1,2 @@
-;; better dir
-(require 'dired+)
+(use-package dired+
+  :ensure t)

@@ -1,4 +1,8 @@
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize)
-  (exec-path-from-shell-copy-env "GOPATH")
-  (exec-path-from-shell-copy-env "PKG_CONFIG_PATH"))
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (progn
+    (exec-path-from-shell-copy-env "PATH")
+    (exec-path-from-shell-copy-env "GOPATH")
+    (exec-path-from-shell-copy-env "PKG_CONFIG_PATH")
+  ))
