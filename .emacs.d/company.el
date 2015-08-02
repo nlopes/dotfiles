@@ -14,3 +14,7 @@
 (use-package company-go
   :ensure t
   :defer t)
+
+(use-package company-racer
+  :ensure t
+  :defer t)
