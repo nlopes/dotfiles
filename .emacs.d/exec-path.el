@@ -1,6 +1,6 @@
 (use-package exec-path-from-shell
   :ensure t
-  :init
+  :config
   (progn
     (exec-path-from-shell-copy-env "PATH")
     (exec-path-from-shell-copy-env "GOPATH")

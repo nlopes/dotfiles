@@ -4,6 +4,7 @@
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
+(global-hl-line-mode t)
 
 ;; highlight my fonts
 (global-font-lock-mode t)
@@ -15,6 +16,8 @@
 
 ;; match parenthesis (I like it)
 (show-paren-mode t)
+;; highlight between parenthesis
+(setq show-paren-style 'expression)
 
 ;; highlight the region when marking is active
 (transient-mark-mode 't)
@@ -22,7 +25,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; I like to have the column number
-(setq column-number-mode t)
+(column-number-mode t)
 
 ;; y/n instead of yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -79,3 +82,10 @@
 ;; defaults for various file types
 (add-to-list 'auto-mode-alist '("\\.zsh$" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\.gitconfig$" . conf-mode))
+
+(set-default-font "Ubuntu Mono derivative Powerline 14")
+
+;; calendar stuff
+(setq european-calendar-style 't
+      calendar-week-start-day 1
+      ps-paper-type 'a4)

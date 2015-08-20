@@ -30,6 +30,7 @@
 (load "~/.emacs.d/projectile.el")
 (load "~/.emacs.d/go.el")
 (load "~/.emacs.d/python.el")
+(load "~/.emacs.d/ruby.el")
 (load "~/.emacs.d/rust.el")
 (load "~/.emacs.d/deft.el")
 
