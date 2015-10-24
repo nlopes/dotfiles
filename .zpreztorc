@@ -1,6 +1,8 @@
 source ~/.zprezto/runcoms/zpreztorc
 
 zstyle ':prezto:*:*' case-sensitive 'yes'
+zstyle ':prezto:*:*' color 'yes'
+zstyle ':prezto:load' zmodule 'attr' 'stat'
 zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
 zstyle ':prezto:load' pmodule \
@@ -15,14 +17,16 @@ zstyle ':prezto:load' pmodule \
   'utility' \
   'completion' \
   'homebrew' \
+  'osx' \
+  'ruby' \
   'git' \
+  'node' \
   'python' \
   'syntax-highlighting' \
   'tmux' \
   'prompt'
 
 zstyle ':prezto:module:editor' key-bindings 'emacs'
-zstyle ':prezto:module:editor' dot-expansion 'yes'
 zstyle ':prezto:module:git:status:ignore' submodules 'all'
 zstyle ':prezto:module:gnu-utility' prefix 'g'
 

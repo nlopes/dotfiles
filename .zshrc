@@ -32,4 +32,6 @@ if [ -n "$INSIDE_EMACS" ]; then
  print -P "\033AnSiTc %d"
 fi
 
+source $(brew --prefix nvm)/nvm.sh
+
 [ -f $HOME/.zshrc_tokens ] && source ~/.zshrc_tokens
