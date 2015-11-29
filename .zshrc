@@ -10,18 +10,6 @@ POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 
 export TERM='xterm-256color'
 
-export GOPATH=$HOME/Repos/Go
-export PATH=$GOPATH/bin:/usr/local/opt/go/libexec/bin:/opt/local/bin:/opt/local/sbin:$PATH
-
-export MANPATH=/opt/local/share/man:$MANPATH
-# for ncurses from macports
-export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig/:$PKG_CONFIG_PATH
-
-# docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
 # canonical way for emacs to start server mode
 export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
@@ -32,6 +20,7 @@ if [ -n "$INSIDE_EMACS" ]; then
  print -P "\033AnSiTc %d"
 fi
 
+alias ke="emacsclient -e '(kill-emacs)'"
 source $(brew --prefix nvm)/nvm.sh
 
 [ -f $HOME/.zshrc_tokens ] && source ~/.zshrc_tokens
