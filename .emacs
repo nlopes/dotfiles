@@ -25,14 +25,16 @@
 
 (load "~/.emacs.d/dired.el")
 (load "~/.emacs.d/exec-path.el")
+(load "~/.emacs.d/projectile.el")
 (load "~/.emacs.d/helm.el")
 (load "~/.emacs.d/magit.el")
-(load "~/.emacs.d/projectile.el")
+(load "~/.emacs.d/alchemist.el")
 (load "~/.emacs.d/go.el")
 (load "~/.emacs.d/python.el")
 (load "~/.emacs.d/ruby.el")
 (load "~/.emacs.d/rust.el")
 (load "~/.emacs.d/deft.el")
+(load "~/.emacs.d/trello.el")
 
 (load "~/.emacs.d/hooks.el")
 (load "~/.emacs.d/keybindings.el")
