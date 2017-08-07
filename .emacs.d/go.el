@@ -6,9 +6,11 @@
   :ensure t
   :init
   :config
-
+  (use-package go-errcheck
+    :ensure t
+    )
   (defun my-go-mode-hook ()
-    ;; code.google.com/p/go.tools/cmd/goimports
+    ;; golang.org/x/tools/cmd/goimports
     (setq gofmt-command "goimports")
     ;; call gofmt before saving
     (add-hook 'before-save-hook 'gofmt-before-save)
@@ -37,13 +39,14 @@
   (add-hook 'go-mode-hook 'company-mode)
   (add-hook 'go-mode-hook 'go-eldoc-setup)
   (add-hook 'go-mode-hook 'highlight-word-hook)
-  (load "$GOPATH/src/golang.org/x/tools/cmd/oracle/oracle.el")
   (add-to-list 'load-path (concat (getenv "GOPATH")
                                   "/src/github.com/golang/lint/misc/emacs"))
   (require 'golint)
-  (add-hook 'go-mode-hook 'go-oracle-mode)
   (add-hook 'go-mode-hook 'my-go-mode-hook)
   (add-hook 'go-mode-hook 'go-doc)
+
+  (require 'go-guru)
+  (add-hook 'go-mode-hook #'go-guru-hl-identifier-mode)
   )
 
 (eval-after-load 'go-mode

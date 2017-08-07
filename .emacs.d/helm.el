@@ -28,8 +28,6 @@
   (helm-autoresize-mode 1)
 )
 
-(use-package helm-ag
-  :ensure t)
 ;;(use-package helm-dash
 ;;  :ensure t)
 (use-package helm-go-package

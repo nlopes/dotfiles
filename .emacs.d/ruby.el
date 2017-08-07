@@ -1,9 +1,11 @@
 (use-package ruby-mode
   :ensure t
   :defer t
-  :mode (("\\.\\(gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|thor\\)\\'" . ruby-mode)
-         ("Gemfile\\(\\.lock\\)?\\|\\(Cap\\|Guard\\|[rR]ake\\|Vagrant\\)file\\'" . ruby-mode))
+  :mode (("\\.\\(gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|thor\\)" . ruby-mode)
+         ("Gemfile\\(\\.lock\\)?\\|\\(Cap\\|Guard\\|[rR]ake\\|Vagrant\\)file" . ruby-mode))
   :config (progn
+	    (global-set-key (kbd "C-c r a") 'rvm-activate-corresponding-ruby)
+	    (add-hook 'ruby-mode-hook 'projectile-on)
             (use-package robe
               :ensure t
               :diminish robe-mode)
@@ -31,7 +33,7 @@
               '(push 'company-robe company-backends))
             ;; to get rbenv to pick up the correct ruby version for the project
             (defadvice inf-ruby-console-auto (before activate-rvm-for-robe activate)
-              (rvm-activate-corresponding-ruby))
+              (rbenv-use-corresponding))
             ))
 
 (use-package rbenv
