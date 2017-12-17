@@ -1,12 +1,11 @@
 (load "~/.emacs.d/base.el")
-(load-theme 'wombat t)
+
+(package-initialize)
 
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
-
-(package-initialize)
 
 ;; Bootstrap `use-package'
 (unless (package-installed-p 'use-package)
@@ -23,7 +22,9 @@
 (if window-system
     (load "~/.emacs.d/desktop.el"))
 
+(load "~/.emacs.d/theme.el")
 (load "~/.emacs.d/dired.el")
+(load "~/.emacs.d/guru.el")
 (load "~/.emacs.d/exec-path.el")
 (load "~/.emacs.d/projectile.el")
 (load "~/.emacs.d/helm.el")

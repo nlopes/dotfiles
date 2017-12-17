@@ -2,8 +2,7 @@
   :config
   (progn
     (helm-mode 1)
-    (helm-adaptive-mode 1)
-    (helm-push-mark-mode 1)))
+    (helm-adaptive-mode 1)))
 
 (use-package helm
   :ensure t

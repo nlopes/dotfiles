@@ -1,13 +1,14 @@
 (setq initial-scratch-message "")
 (setq inhibit-startup-message t)
 
-(tool-bar-mode -1)
 (menu-bar-mode -1)
-(scroll-bar-mode -1)
 (global-hl-line-mode t)
 
 ;; highlight my fonts
 (global-font-lock-mode t)
+
+;; tags question is annoying
+(setq tags-revert-without-query 1)
 
 ;; no beeping
 (setq echo-keystrokes 0.1
