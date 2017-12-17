@@ -6,13 +6,16 @@
 
 [github]
     user = nlopes
-    token = THAT_WOULD_BE_PRICELESS_WOULDN'T_IT?
 
 [core]
-    editor = emacs
+    editor = emacsclient -t -a \\\"\\\"
+    excludesfile = /home/nlopes/.gitignore_global
 
 [color]
     ui = auto
+
+[commit]
+    gpgSign = true
 
 [alias]
     pullr = pull --rebase
@@ -28,12 +31,20 @@
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n          %C(bold white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
     dw = diff --word-diff
     prune-local = !git branch --merged | tr -d '*' | grep -v dev | xargs -n1 git branch -d
+    ff = merge --ff-only
+
+[merge]
+    ff = only
+    conflictstyle = diff3
 
 [push]
-    default = current
+    default = simple
+
+[status]
+    showUntrackedFiles = all
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
 
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
