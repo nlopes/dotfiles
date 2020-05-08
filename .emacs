@@ -1,5 +1,3 @@
-(load "~/.emacs.d/base.el")
-
 (package-initialize)
 
 (require 'package)
@@ -13,33 +11,17 @@
   (package-install 'use-package))
 (require 'use-package)
 
-(load "~/.emacs.d/flycheck.el")
-(load "~/.emacs.d/powerline.el")
-(load "~/.emacs.d/idle-highlight.el")
-(load "~/.emacs.d/c.el")
-(load "~/.emacs.d/company.el")
+(load "~/.emacs.d/imports.el")
 
-(if window-system
-    (load "~/.emacs.d/desktop.el"))
-
-(load "~/.emacs.d/theme.el")
-(load "~/.emacs.d/dired.el")
-(load "~/.emacs.d/guru.el")
-(load "~/.emacs.d/exec-path.el")
-(load "~/.emacs.d/projectile.el")
-(load "~/.emacs.d/helm.el")
-(load "~/.emacs.d/magit.el")
-(load "~/.emacs.d/alchemist.el")
-(load "~/.emacs.d/go.el")
-(load "~/.emacs.d/python.el")
-(load "~/.emacs.d/ruby.el")
-(load "~/.emacs.d/rust.el")
-(load "~/.emacs.d/deft.el")
-(load "~/.emacs.d/trello.el")
-
-(load "~/.emacs.d/hooks.el")
-(load "~/.emacs.d/keybindings.el")
-
-(use-package autopair
-  :ensure t
-  :init)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

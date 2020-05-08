@@ -1,14 +1,9 @@
-(use-package neotree
-  :ensure t
-  :bind ("C-c t" . neotree-toggle)
-  :config
-  (setq neo-theme (if window-system 'icons 'arrows)))
-
 (use-package projectile
   :ensure t
   :init
+  (projectile-global-mode)
   (setq projectile-completion-system 'helm)
-  (setq projectile-switch-project-action 'neotree-projectile-action)
+  ;;(setq projectile-switch-project-action 'treemacs-projectile-action)
   (defun smart-switch-buffer ()
     "Call `counsel-projectile-switch-to-buffer` if `projectile-project-p`, otherwise
      fallback to `helm-mini`."
@@ -16,8 +11,9 @@
     (helm-mini))
   :bind
   ("C-x b" . smart-switch-buffer)
+  ("C-c p" . projectile-command-map)
   :config
-  (projectile-global-mode)
+  (setq projectile-globally-ignored-directories (append projectile-globally-ignored-directories '("target/" ".elixir_ls/")))
   (use-package helm-projectile
     :ensure t
     :init
@@ -34,9 +30,3 @@
   (setq projectile-enable-caching t)
   (helm-projectile-on)
   )
-
-(use-package projectile-rails
-  :ensure t
-  :init
-  (projectile-rails-global-mode)
-)
